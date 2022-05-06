@@ -5,7 +5,9 @@ Console.WriteLine(@"      MENU
 2 - Exercício 02
 3 - Exercício 03
 4 - Exercício 04
-5 - Exercício 05");
+5 - Exercício 05
+6 - Exercício 06
+7 - Exercício 07");
 
 Console.Write("Digite o Exercício Desejado: ");
 int exercicioDesejado = Convert.ToInt32(Console.ReadLine());
