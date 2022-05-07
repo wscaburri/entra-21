@@ -31,10 +31,11 @@ namespace Entra21.ExerciciosWhile
                     quantidadeProduto = Convert.ToInt32(Console.ReadLine());
 
                     valorTotalCompra = valorTotalCompra + (valorProduto * quantidadeProduto);
+                    Console.Clear();
                 }
             }
 
-            Console.WriteLine("Valor total da compra: R$" + valorTotalCompra);
+            Console.WriteLine("Valor total da compra: R$" + (valorTotalCompra * 0.95));
 
         }
     }
