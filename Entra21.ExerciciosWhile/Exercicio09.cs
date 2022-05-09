@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExerciciosWhile
 {
-    internal class Exercicio08
+    internal class Exercicio09
     {
         public void Executar()
         {
-            //8.Solicite um número e apresentar a tabuada do mesmo até 1000.
+            //9. Solicite um número e faça o fatorial deste número, utilizando while.
 
-            int indice = 0;
-            
             Console.Write("Informe um número: ");
             int numero = Convert.ToInt32(Console.ReadLine());
+            int fatorial = numero - 1;
 
-            while (indice <= 1000)
+            while (fatorial < 0)
             {
-                Console.WriteLine(numero + " X " + indice + " = " + (numero*indice));
-                indice = indice + 1;
-            }            
+                Console.WriteLine(numero * fatorial);
+                fatorial = fatorial - 1;
+            }
         }
     }
 }

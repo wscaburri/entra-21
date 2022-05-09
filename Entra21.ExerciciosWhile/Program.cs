@@ -1,14 +1,18 @@
 ﻿using Entra21.ExerciciosWhile;
 
 Console.WriteLine(@"      MENU      
-1 - Exercício 01
-2 - Exercício 02
-3 - Exercício 03
-4 - Exercício 04
-5 - Exercício 05
-6 - Exercício 06
-7 - Exercício 07
-8 - Exercício 08");
+01 - Exercício 01
+02 - Exercício 02
+03 - Exercício 03
+04 - Exercício 04
+05 - Exercício 05
+06 - Exercício 06
+07 - Exercício 07
+08 - Exercício 08
+09 - Exercício 09
+10 - Exercício 10
+11 - Exercício 11
+12 - Exercício 12");
 
 Console.Write("Digite o Exercício Desejado: ");
 int exercicioDesejado = Convert.ToInt32(Console.ReadLine());
@@ -54,4 +58,19 @@ else if (exercicioDesejado == 8)
 {
     Exercicio08 exercicio08 = new Exercicio08();
     exercicio08.Executar();
+}
+else if (exercicioDesejado == 9)
+{
+    Exercicio09 exercicio09 = new Exercicio09();
+    exercicio09.Executar();
+}
+else if (exercicioDesejado == 11)
+{
+    Exercicio11 exercicio11 = new Exercicio11();
+    exercicio11.Executar();
+}
+else if (exercicioDesejado == 12)
+{
+    Exercicio12 exercicio12 = new Exercicio12();
+    exercicio12.Executar();
 }
