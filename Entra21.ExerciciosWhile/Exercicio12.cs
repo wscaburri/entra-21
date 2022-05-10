@@ -5,7 +5,7 @@
     }
 
     internal void Executar()
-    {     
+    {
         Console.WriteLine(@"***********************************CARDÁPIO************************************");
         Console.WriteLine("|CÓDIGO |    TIPO    |                    NOME                     |  VALOR   |");
         Console.WriteLine("| 1     | Bolos      | Bolo Brigadeiro                             | R$ 29,50 |");
@@ -25,16 +25,14 @@
         Console.WriteLine("| 15    | Pizzas     | Portuguesa                                  | R$ 27,50 |");
         Console.WriteLine("| 16                 | SAIR                                                   |");
 
-        int quantidadeProdutos = 0, quantidadeBolos = 0, quantidadeDoces = 0, quantidadeSanduiches = 0, quantidadePizzas = 0;
-        double valorTotalPedido = 0, media = 0;
+        int indice = 0, quantidadeProdutos = 0, quantidadeBolos = 0, quantidadeDoces = 0, quantidadeSanduiches = 0, quantidadePizzas = 0;
+        double valorTotalPedido = 0;
 
-        Console.Write("Escolha as opções desejadas: ");
-        int opcaoDesejada = Convert.ToInt32(Console.ReadLine());
-
-
-
-        while (opcaoDesejada < 16)
+        while (indice < 1)
         {
+            Console.Write("Escolha as opções desejadas: ");
+            int opcaoDesejada = Convert.ToInt32(Console.ReadLine());
+
             if (opcaoDesejada == 1)
             {
                 quantidadeProdutos = quantidadeProdutos + 1;
@@ -101,12 +99,42 @@
                 quantidadeSanduiches = quantidadeSanduiches + 1;
                 valorTotalPedido = valorTotalPedido + 12.70;
             }
-
+            else if (opcaoDesejada == 12)
+            {
+                quantidadeProdutos = quantidadeProdutos + 1;
+                quantidadePizzas = quantidadePizzas + 1;
+                valorTotalPedido = valorTotalPedido + 8.98;
+            }
+            else if (opcaoDesejada == 13)
+            {
+                quantidadeProdutos = quantidadeProdutos + 1;
+                quantidadePizzas = quantidadePizzas + 1;
+                valorTotalPedido = valorTotalPedido + 0.42;
+            }
+            else if (opcaoDesejada == 14)
+            {
+                quantidadeProdutos = quantidadeProdutos + 1;
+                quantidadePizzas = quantidadePizzas + 1;
+                valorTotalPedido = valorTotalPedido + 18.36;
+            }
+            else if (opcaoDesejada == 15)
+            {
+                quantidadeProdutos = quantidadeProdutos + 1;
+                quantidadePizzas = quantidadePizzas + 1;
+                valorTotalPedido = valorTotalPedido + 27.50;
+            }
+            else
+            {
+                Console.WriteLine("Pedido Finalizado");
+                indice = 1;
+            }
         }
 
-
-
-
-
+        Console.WriteLine("Valor Total do Pedido: R$" + valorTotalPedido);
+        Console.WriteLine("Quantidade de bolos pedido: " + quantidadeBolos);
+        Console.WriteLine("Quantidade de doces pedido: " + quantidadeDoces);
+        Console.WriteLine("Quantidade de sanduíches pedido: " + quantidadeSanduiches);
+        Console.WriteLine("Quantidade de pizzas pedida: " + quantidadePizzas);
+        Console.WriteLine("Média dos produtos: R$ " + (valorTotalPedido / quantidadeProdutos).ToString("F"));
     }
 }
