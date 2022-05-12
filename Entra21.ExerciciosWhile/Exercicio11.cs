@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entra21.ExerciciosWhile
+﻿namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio11
     {
@@ -19,9 +13,9 @@ namespace Entra21.ExerciciosWhile
             Console.Write("Informe o segundo número: ");
             double numero2 = Convert.ToDouble(Console.ReadLine());
 
-            int indice = 0;
+            bool sair = false;
 
-            while (indice < 5)
+            while (sair == false)
             {
                 Console.WriteLine(@"          MENU
 1 - SOMAR
@@ -34,7 +28,7 @@ namespace Entra21.ExerciciosWhile
                 int opcaoDesejada = Convert.ToInt32(Console.ReadLine());
 
                 Console.Clear();
-
+                
                 if (opcaoDesejada == 1)
                 {
                     Console.WriteLine(numero1 + " + " + numero2 + " = " + (numero1 + numero2));
@@ -55,13 +49,14 @@ namespace Entra21.ExerciciosWhile
                 else if (opcaoDesejada == 5)
                 {
                     Console.Write("FIM DA OPERAÇÃO");
-                    indice = 5;
+                    sair = true;
                 }
                 else
                 {
                     Console.WriteLine("Opção Inválida, tente outra vez");
                 }
 
+                Console.WriteLine();
             }
 
         }
