@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entra21.ExerciciosWhile
+﻿namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio03
     {
@@ -19,7 +13,6 @@ namespace Entra21.ExerciciosWhile
                 Console.Write("Digite sua idade: ");
                 idade = Convert.ToInt32(Console.ReadLine());
             }
-
         }
     }
 }

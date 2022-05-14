@@ -25,7 +25,6 @@ namespace Entra21.ExerciciosWhile
             }
 
             Console.WriteLine("Quantidade de Pessoas que informaram o peso: " + quantidadePessoas);
-
         }
     }
 }

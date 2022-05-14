@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entra21.ExerciciosWhile
+﻿namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio05
     {
         public void Executar()
         {
             //5. Faça um programa que solicite a quantidade de carros que o usuário deseja cadastrar,
-            //após isto solicite para o usuário o modelo, valor e ano do carro até que atinja
-            //a quantidade de carros para cadastro.
+            //após isto solicite para o usuário o modelo, valor e ano do carro, 
+            //até que atinja a quantidade de carros para cadastro.
             //Apresente ao final:
             //● Média do ano dos carros;
             //● Média do valor dos carros;
@@ -62,7 +56,6 @@ namespace Entra21.ExerciciosWhile
             Console.WriteLine("A média do ano de fabricação dos carros é: R$" + mediaAnoFabricacao);
             Console.WriteLine("A quantidade de carros que começa com a letra G é: " + quantidadeCarrosLetraG);
             Console.WriteLine("A quantidade de carros que começa com a letra A é: " + quantidadeCarrosLetraA);
-
         }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entra21.ExerciciosWhile
+﻿namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio02
     {
@@ -24,7 +18,6 @@ namespace Entra21.ExerciciosWhile
             }
 
             Console.WriteLine("Quantidade de nomes solicitados: " + (quantidadeNomes - 1));
-
         }
     }
 }

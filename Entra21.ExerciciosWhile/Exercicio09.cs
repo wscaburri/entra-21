@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entra21.ExerciciosWhile
+﻿namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio09
     {
@@ -14,13 +8,21 @@ namespace Entra21.ExerciciosWhile
 
             Console.Write("Informe um número: ");
             int numero = Convert.ToInt32(Console.ReadLine());
-            int fatorial = numero - 1;
 
-            while (fatorial < 0)
+            int fatorial = numero;
+
+            while (numero > 0)
             {
-                Console.WriteLine(numero * fatorial);
-                fatorial = fatorial - 1;
+                Console.WriteLine(numero);
+                numero = numero - 1;
+
+                if (numero > 0)
+                {
+                    fatorial = fatorial * numero;
+                }
             }
+
+            Console.WriteLine("Resultado = " + fatorial);
         }
     }
 }

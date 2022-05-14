@@ -7,13 +7,15 @@
             int indice = 0;
             int generoFeminino = 0, generoMasculino = 0,
                 menorQuantidadeCartoesAmarelos = 1000, maiorQuantidadeCartoesAmarelos = 0,
-                menorQuantidadeCartoesVermelhos = 1000, maiorQuantidadeCartoesVermelhos = 0;
+                menorQuantidadeCartoesVermelhos = 1000, maiorQuantidadeCartoesVermelhos = 0,
+                caracterMenorNome = 1000, caracterMaiorNome = 0;
             double maiorPeso = 0, menorPeso = 1000, maiorAltura = 0;
             string jogadorMaiorPeso = "", jogadorMenorPeso = "", jogadorMaiorAltura = "",
-                maiorNome = "", menorNome = "", jogadorMenorQuantidadeAmarelo = "", jogadorMaiorQuantidadeAmarelo = "",
-                jogadorMenorQuantidadeVermelho = "", jogadorMaiorQuantidadeVermelho = "";
+                jogadorMenorQuantidadeAmarelo = "", jogadorMaiorQuantidadeAmarelo = "",
+                jogadorMenorQuantidadeVermelho = "", jogadorMaiorQuantidadeVermelho = "",
+                maiorNome = "", menorNome = "";
 
-            while (indice < 3)
+            while (indice < 2)
             {
                 Console.Write("Informe o nome: ");
                 string nome = Console.ReadLine();
@@ -84,6 +86,18 @@
                     jogadorMaiorQuantidadeVermelho = nome;
                 }
 
+                if (nome.Length > caracterMaiorNome)
+                {
+                    caracterMaiorNome = nome.Length;
+                    maiorNome = nome;
+                }
+
+                if (nome.Length < caracterMenorNome)
+                {
+                    caracterMenorNome = nome.Length;
+                    menorNome = nome;
+                }
+
                 indice = indice + 1;
             }
 
@@ -96,7 +110,9 @@
                 "\nMenor Quantidade de Cartões Amarelos = " + jogadorMenorQuantidadeAmarelo +
                 "\nMaior Quantidade de Cartões Amarelos = " + jogadorMaiorQuantidadeAmarelo +
                 "\nMenor Quantidade de Cartões Vermelhos = " + jogadorMenorQuantidadeVermelho +
-                "\nMaior Quantidade de Cartões Vermelhos = " + jogadorMaiorQuantidadeVermelho);
+                "\nMaior Quantidade de Cartões Vermelhos = " + jogadorMaiorQuantidadeVermelho +
+                "\nMenor Nome: " + menorNome +
+                "\nMaior Nome: " + maiorNome);
         }
     }
 }

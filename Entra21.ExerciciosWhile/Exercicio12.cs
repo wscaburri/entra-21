@@ -123,7 +123,7 @@
                 quantidadePizzas = quantidadePizzas + 1;
                 valorTotalPedido = valorTotalPedido + 27.50;
             }
-            else if (opcaoDesejada == 16 )
+            else if (opcaoDesejada == 16)
             {
                 Console.WriteLine("Pedido Finalizado");
                 indice = 1;

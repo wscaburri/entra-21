@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entra21.ExerciciosWhile
+﻿namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio01
     {
@@ -22,7 +16,6 @@ namespace Entra21.ExerciciosWhile
                 double valorPeca = Convert.ToDouble(Console.ReadLine());
                 indice = indice + 1;
             }
-
         }
     }
 }

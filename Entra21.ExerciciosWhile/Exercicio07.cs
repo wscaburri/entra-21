@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entra21.ExerciciosWhile
+﻿namespace Entra21.ExerciciosWhile
 {
     internal class Exercicio07
     {
@@ -39,7 +33,6 @@ namespace Entra21.ExerciciosWhile
             }
 
             Console.WriteLine("VALOR TOTAL COM DESCONTO: R$" + (valorTotalCompra - 150));
-
         }
     }
 }
