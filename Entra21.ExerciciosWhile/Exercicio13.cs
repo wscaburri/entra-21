@@ -7,13 +7,12 @@
             int indice = 0;
             int generoFeminino = 0, generoMasculino = 0,
                 menorQuantidadeCartoesAmarelos = 1000, maiorQuantidadeCartoesAmarelos = 0,
-                menorQuantidadeCartoesVermelhos = 1000, maiorQuantidadeCartoesVermelhos = 0,
-                caracterMenorNome = 1000, caracterMaiorNome = 0;
+                menorQuantidadeCartoesVermelhos = 1000, maiorQuantidadeCartoesVermelhos = 0;                
             double maiorPeso = 0, menorPeso = 1000, maiorAltura = 0;
             string jogadorMaiorPeso = "", jogadorMenorPeso = "", jogadorMaiorAltura = "",
                 jogadorMenorQuantidadeAmarelo = "", jogadorMaiorQuantidadeAmarelo = "",
                 jogadorMenorQuantidadeVermelho = "", jogadorMaiorQuantidadeVermelho = "",
-                maiorNome = "", menorNome = "";
+                maiorNome = null, menorNome = null;
 
             while (indice < 2)
             {
@@ -86,15 +85,19 @@
                     jogadorMaiorQuantidadeVermelho = nome;
                 }
 
-                if (nome.Length > caracterMaiorNome)
+                if (maiorNome == null && menorNome == null)
                 {
-                    caracterMaiorNome = nome.Length;
+                    maiorNome = nome;
+                    menorNome = nome;
+                }
+
+                if (nome.Length > maiorNome.Length)
+                {
                     maiorNome = nome;
                 }
 
-                if (nome.Length < caracterMenorNome)
-                {
-                    caracterMenorNome = nome.Length;
+                if (nome.Length < menorNome.Length)
+                {                    
                     menorNome = nome;
                 }
 

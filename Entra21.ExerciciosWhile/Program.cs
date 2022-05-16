@@ -89,3 +89,23 @@ else if (exercicioDesejado == 13)
     Exercicio13 exercicio13 = new Exercicio13();
     exercicio13.Executar();
 }
+else if (exercicioDesejado == 14)
+{
+    Exercicio14 exercicio14 = new Exercicio14();
+    exercicio14.Executar();
+}
+else if (exercicioDesejado == 15)
+{
+    Exercicio15 exercicio15 = new Exercicio15();
+    exercicio15.Executar();
+}
+else if (exercicioDesejado == 16)
+{
+    Exercicio16 exercicio16 = new Exercicio16();
+    exercicio16.Executar();
+}
+else if (exercicioDesejado == 17)
+{
+    Exercicio17 exercicio17 = new Exercicio17();
+    exercicio17.Executar();
+}
