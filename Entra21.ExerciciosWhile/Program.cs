@@ -121,3 +121,8 @@ else if (exercicioDesejado == 19)
     Exercicio19 exercicio19 = new Exercicio19();
     exercicio19.Executar();
 }
+else if (exercicioDesejado == 20)
+{
+    Exercicio20 exercicio20 = new Exercicio20();
+    exercicio20.Executar();
+}
