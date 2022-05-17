@@ -17,7 +17,7 @@ namespace Entra21.ExerciciosWhile
 
             for (var i = 0; i <= 1000; i++)
             {
-                Console.WriteLine(numero + " X " + i + " = " + (numero*i).ToString("F"));
+                Console.WriteLine(numero + " X " + i + " = " + (numero*i));
             }
         }
     }
