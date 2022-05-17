@@ -19,7 +19,8 @@ Console.WriteLine(@"      MENU
 16 - Exercício 16
 17 - Exercício 17
 18 - Exercício 18
-19 - Exercício 19");    
+19 - Exercício 19
+20 - Exercício 20");    
 
 Console.Write("Digite o Exercício Desejado: ");
 int exercicioDesejado = Convert.ToInt32(Console.ReadLine());
