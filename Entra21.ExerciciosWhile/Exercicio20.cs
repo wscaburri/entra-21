@@ -12,12 +12,26 @@ namespace Entra21.ExerciciosWhile
         {
             //8.Solicite um número e apresentar a tabuada do mesmo até 1000.
 
-            Console.Write("Informe um número: ");
-            var numero = Convert.ToDouble(Console.ReadLine());
+            var numeroValido = false;
 
-            for (var i = 0; i <= 1000; i++)
+            while (numeroValido == false)
             {
-                Console.WriteLine(numero + " X " + i + " = " + (numero*i));
+                try
+                {
+                    Console.Write("Informe um número: ");
+                    var numero = Convert.ToDouble(Console.ReadLine());
+
+                    for (var i = 0; i <= 1000; i++)
+                    {
+                        Console.WriteLine(numero + " X " + i + " = " + (numero * i));
+                    }
+
+                    numeroValido = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Opção Inválida. Tente novamente com um número válido!");
+                }
             }
         }
     }
