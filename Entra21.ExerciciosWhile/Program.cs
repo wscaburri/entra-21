@@ -20,7 +20,9 @@ Console.WriteLine(@"      MENU
 17 - Exercício 17
 18 - Exercício 18
 19 - Exercício 19
-20 - Exercício 20");    
+20 - Exercício 20
+21 - Exercício 21
+22 - Exercício 22");    
 
 Console.Write("Digite o Exercício Desejado: ");
 int exercicioDesejado = Convert.ToInt32(Console.ReadLine());
@@ -127,3 +129,17 @@ else if (exercicioDesejado == 20)
     Exercicio20 exercicio20 = new Exercicio20();
     exercicio20.Executar();
 }
+else if (exercicioDesejado == 21)
+{
+    Exercicio21 exercicio21 = new Exercicio21();
+    exercicio21.Executar();
+}
+else if (exercicioDesejado == 22)
+{
+    Exercicio22 exercicio22 = new Exercicio22();
+    exercicio22.Executar();
+}
+
+
+
+
