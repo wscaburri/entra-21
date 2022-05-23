@@ -6,36 +6,28 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExerciciosVetor
 {
-    internal class Exercicios01
+    internal class Exercicio01
     {
         public void Executar()
         {
             //1. Crie um vetor para guardar 16 números inteiros.
             //Preencha todas as posições com números e apresente a soma destes números.
 
-            int[] numerosInteiros = new int[2];  
-            bool numeroValido = false;
-            
-            
-            while(numeroValido == false)
-            {                
+            int[] numerosInteiros = new int[16];
+
+            for (int i = 0; i < numerosInteiros.Length; i = i + 1)
+            {
                 try
                 {
-                    for (int i = 0; i < numerosInteiros.Length; i = i + 1)
-                    {
-                        Console.Write("Digite um número inteiro: ");
-                        numerosInteiros[i] = Convert.ToInt32(Console.ReadLine());
-
-                        numeroValido = true;
-                    }                    
+                    Console.Write("Digite um número inteiro: ");
+                    numerosInteiros[i] = Convert.ToInt32(Console.ReadLine());
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Esse número não é um inteiro válido, tente novamente.");
-                    numeroValido = true;
-                }         
-                
-            }            
+                    Console.WriteLine("Opção inválida. Tente novamente.");
+                    i--;
+                }                
+            }
 
             int somaNumeros = 0;
 
@@ -45,7 +37,6 @@ namespace Entra21.ExerciciosVetor
             }
 
             Console.WriteLine("A soma de todos os números é: " + somaNumeros);
-
         }
     }
 }
