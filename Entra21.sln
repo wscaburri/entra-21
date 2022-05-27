@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWhile", "En
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "Entra21.ExerciciosWhile\Entra21.ExerciciosWhile.csproj", "{1E198343-599F-43A0-9B60-86E260AFEC44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosVetor", "Entra21.ExerciciosVetor\Entra21.ExerciciosVetor.csproj", "{82AFAB6D-7AD0-4ECF-B77B-C6E07A21E07D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosVetor", "Entra21.ExerciciosVetor\Entra21.ExerciciosVetor.csproj", "{82AFAB6D-7AD0-4ECF-B77B-C6E07A21E07D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosOrientacaoObjeto", "Entra21.ExerciciosOrientacaoObjeto\Entra21.ExerciciosOrientacaoObjeto.csproj", "{D5644B3C-D244-4C99-8165-71BE65ECDCB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{82AFAB6D-7AD0-4ECF-B77B-C6E07A21E07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82AFAB6D-7AD0-4ECF-B77B-C6E07A21E07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82AFAB6D-7AD0-4ECF-B77B-C6E07A21E07D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5644B3C-D244-4C99-8165-71BE65ECDCB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5644B3C-D244-4C99-8165-71BE65ECDCB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5644B3C-D244-4C99-8165-71BE65ECDCB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5644B3C-D244-4C99-8165-71BE65ECDCB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
