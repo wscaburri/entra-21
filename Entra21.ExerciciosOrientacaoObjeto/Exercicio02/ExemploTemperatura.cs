@@ -23,9 +23,7 @@ namespace Entra21.ExerciciosOrientacaoObjeto.Exercicio02
             Console.Write("Para: ");
             temperatura.TemperaturaDestino = Convert.ToDouble(Console.ReadLine());
 
-            var mostrar = temperatura.ApresentarTemperaturaConvertida;
-
-            Console.WriteLine(mostrar);
+            temperatura.ApresentarTemperaturaConvertida();            
         }
     }
 }
