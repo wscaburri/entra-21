@@ -8,7 +8,7 @@ using Entra21.ExerciciosOrientacaoObjeto.Exercicio03;
 //ExemploTemperatura temperatura = new ExemploTemperatura();
 //temperatura.Executar();
 
-ExemploConversor conversor = new ExemploConversor();
+ExemploConversorAscii conversor = new ExemploConversorAscii();
 conversor.Executar();
 
 

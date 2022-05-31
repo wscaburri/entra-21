@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExerciciosOrientacaoObjeto.Exercicio03
 {
-    public class ExemploConversor
+    public class ExemploConversorAscii
     {
         public void Executar()
         {
-            Conversor conversor = new Conversor();
+            ConversorAscii conversor = new ConversorAscii();
 
             Console.Write("Informe o caracter: ");
             conversor.Caracter = Convert.ToChar(Console.ReadLine());
