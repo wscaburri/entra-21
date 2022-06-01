@@ -11,6 +11,7 @@ namespace Entra21.ExerciciosOrientacaoObjetoTest.Exercicio03Test
             [Theory]
             [InlineData('A', 65)]
             [InlineData('K', 75)]
+            [InlineData('o', 111)]
 
             public void Validar_Conversor_Ascii(char caracter, int numero)
             {
