@@ -26,9 +26,9 @@ namespace Entra21.ExerciciosOrientacaoObjeto.Exercicio04
             return totalPedido;
         }
 
-        public double ApresentarTotalDoPedidoPorCategoriaDeProduto()
+        /*public double ApresentarTotalDoPedidoPorCategoriaDeProduto()
         {
 
-        }
+        }*/
     }
 }

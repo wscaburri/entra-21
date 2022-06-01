@@ -219,7 +219,11 @@ namespace Entra21.ExerciciosOrientacaoObjeto.Exercicio03
             else if (Caracter == 'z')
             {
                 return 122;
-            }            
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }

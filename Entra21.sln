@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosVetor", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosOrientacaoObjeto", "Entra21.ExerciciosOrientacaoObjeto\Entra21.ExerciciosOrientacaoObjeto.csproj", "{D5644B3C-D244-4C99-8165-71BE65ECDCB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosOrientacaoObjetoTest", "Entra21.ExerciciosOrientacaoObjetoTest\Entra21.ExerciciosOrientacaoObjetoTest.csproj", "{E2D5A46F-5EC4-41CC-9B65-65F754457D16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosOrientacaoObjetoTest", "Entra21.ExerciciosOrientacaoObjetoTest\Entra21.ExerciciosOrientacaoObjetoTest.csproj", "{E2D5A46F-5EC4-41CC-9B65-65F754457D16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

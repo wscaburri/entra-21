@@ -17,4 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Entra21.ExerciciosOrientacaoObjeto\Entra21.ExerciciosOrientacaoObjeto.csproj" />
+  </ItemGroup>
+
 </Project>

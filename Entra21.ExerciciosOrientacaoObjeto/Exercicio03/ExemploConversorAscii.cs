@@ -15,7 +15,9 @@ namespace Entra21.ExerciciosOrientacaoObjeto.Exercicio03
             Console.Write("Informe o caracter: ");
             conversor.Caracter = Convert.ToChar(Console.ReadLine());
 
-            conversor.ObterCodigoAsciiDoCaracter();
+            var mostrarCodigo = conversor.ObterCodigoAsciiDoCaracter();
+
+            Console.WriteLine("Código Ascii: " + mostrarCodigo); 
         }
     }
 }
