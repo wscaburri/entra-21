@@ -158,6 +158,7 @@ Total: {produto.CalcularPrecoTotal()}");
                     Console.WriteLine("Digite um menu válido");
                 }
             }
+
             return codigo;
         }
 
@@ -222,6 +223,5 @@ Total: {produto.CalcularPrecoTotal()}");
                     "\nNome: " + produtoAtual.Nome + "\n");
             }
         }
-
     }
 }
