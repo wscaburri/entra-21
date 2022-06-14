@@ -97,5 +97,19 @@ namespace Entra21.ExerciciosListaObjetos.Exercicio02
             }
             return nomes;
         }
+
+        public List<double> ObterMedias()
+        {
+            var mediaAluno = new List<double>();
+
+            for (int i = 0; i < alunos.Count; i++)
+            {
+                var aluno = alunos[i];
+                mediaAluno.Add(aluno.CalcularMedia());                
+            }
+
+            return mediaAluno;            
+        }
+        
     }
 }
