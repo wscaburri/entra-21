@@ -138,7 +138,7 @@ namespace Entra21.ExemplosListasObjetos
 
         public List<double> ObterTodosPrecos()
         {
-            // Criar uma lista de preçoso totais
+            // Criar uma lista de preços totais
             var precos = new List<double>();
 
             // Percorre todos os produtos

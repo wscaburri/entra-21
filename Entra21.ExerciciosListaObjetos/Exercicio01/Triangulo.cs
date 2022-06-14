@@ -9,7 +9,7 @@
 
         public bool ValidarTriangulo()
         {
-            return ((Lado1 + Lado2) >= Lado3 && (Lado1 + Lado3) >= Lado2 && (Lado2 + Lado3) >= Lado1)
+            return ((Lado1 + Lado2) >= Lado3 || (Lado1 + Lado3) >= Lado2 || (Lado2 + Lado3) >= Lado1)
                 ? true
                 : false;
         }
