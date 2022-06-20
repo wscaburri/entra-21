@@ -24,6 +24,20 @@
                     AlterarNotasAlunos();
                 else if (opcao == 5)
                     ListarTodosAlunos();
+                else if (opcao == 6)
+                    ListarNomesAlunos();
+                else if (opcao == 7)
+                    ListarAlunosAprovados();
+                else if (opcao == 8)
+                    ListarAlunosReprovados();
+                else if (opcao == 9)
+                    ListarAlunosEmExame();
+                else if (opcao == 10)
+                    ListarMediaAlunoEspecifico();
+                else if (opcao == 11)
+                    ListarStatusAlunoEspecifico();
+                else if (opcao == 12)
+                    ListarMediaIdadesAlunos();
 
                 Console.ReadKey();
             }
@@ -172,6 +186,91 @@
             Console.Write(alterarNotas == true
                 ? "Notas alteradas com sucesso"
                 : "Não foi possível alterar as notas");
+        }
+
+        private void ListarNomesAlunos()
+        {
+            var nomes = "";
+            var alunos = alunoServico.ObterNomes();
+
+            for (int i = 0; i < alunos.Count; i++)
+            {
+                nomes += alunos[i] + "\n";
+            }
+
+            Console.WriteLine("Nome de todos os alunos: " +
+                "\n" + nomes);
+        }
+
+        private void ListarAlunosAprovados()
+        {
+            var nomes = "";
+            var alunos = alunoServico.ObterAprovados();
+
+            for (int i = 0; i < alunos.Count; i++)
+            {
+                nomes += alunos[i] + "\n";
+            }
+
+            Console.WriteLine("Nome dos alunos Aprovados: " +
+                "\n" + nomes);
+        }
+
+        private void ListarAlunosReprovados()
+        {
+            var nomes = "";
+            var alunos = alunoServico.ObterReprovados();
+
+            for (int i = 0; i < alunos.Count; i++)
+            {
+                nomes += alunos[i] + "\n";
+            }
+
+            Console.WriteLine("Nome dos alunos Reprovados: " +
+                "\n" + nomes);
+        }
+
+        private void ListarAlunosEmExame()
+        {
+            var nomes = "";
+            var alunos = alunoServico.ObterEmExame();
+
+            for (int i = 0; i < alunos.Count; i++)
+            {
+                nomes += alunos[i] + "\n";
+            }
+
+            Console.WriteLine("Nome dos alunos Em Exame: " +
+                "\n" + nomes);
+        }
+
+        private void ListarMediaAlunoEspecifico()
+        {
+            ListarTodosAlunos();
+
+            Console.Write("Digite o Código de Matrícula do aluno desejado: ");
+            var codigoMatricula = Convert.ToInt32(Console.ReadLine());
+
+            var mediaAluno = alunoServico.ObterMediaPorCodigoMatricula(codigoMatricula);
+
+            Console.WriteLine("A média do aluno é: " + mediaAluno.ToString());
+        }
+
+        private void ListarStatusAlunoEspecifico()
+        {
+            ListarTodosAlunos();
+
+            Console.Write("Digite o Código de Matrícula do aluno desejado: ");
+            var codigoMatricula = Convert.ToInt32(Console.ReadLine());
+
+            var statusAluno = alunoServico.ObterStatusPorCodigoMatricula(codigoMatricula);
+
+            Console.WriteLine("O status do aluno é: " + statusAluno);
+        }
+
+        private void ListarMediaIdadesAlunos()
+        {
+            Console.WriteLine("A média das idades dos alunos é de: " + alunoServico.ObterMediaIdades().ToString() + " anos");
         }
     }
 }
