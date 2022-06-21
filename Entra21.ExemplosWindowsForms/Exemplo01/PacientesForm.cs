@@ -64,9 +64,10 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         private void buttonApagar_Click(object sender, EventArgs e)
         {
-            var indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
+            // Obter a quantidade de linhas que o usuário selecionou no DateGridView
+            var quantidadeLinhasSelecionadas = dataGridView1.SelectedRows.Count;
 
-            if (indiceLinhaSelecionada == -1)
+            if (quantidadeLinhasSelecionadas == 0)
             {
                 MessageBox.Show("Selecione um Paciente");
                 return;
@@ -78,10 +79,10 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             if (opcaoEscolhida == DialogResult.Yes)
             {
                 // Remove a linha utilizando o indice do DataGridView
-                dataGridView1.Rows.RemoveAt(indiceLinhaSelecionada);
+                dataGridView1.Rows.RemoveAt(quantidadeLinhasSelecionadas);
 
                 // Remove o paciente da lista de pacientes
-                pacientes.RemoveAt(indiceLinhaSelecionada);
+                pacientes.RemoveAt(quantidadeLinhasSelecionadas);
 
                 // Atualiza o arquivo com lista de pacientes sem o paciente removido
                 SalvarEmArquivo();
