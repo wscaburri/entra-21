@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entra21.ExemplosWindowsForms.Exemplo01
 {
@@ -15,6 +10,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
         public EnderecoServico()
         {
             enderecos = new List<Endereco>();
+
+            LerArquivo();
         }
 
         // Método adicionar recebe como parametro o objeto do endereço completo do Form(Controller)
