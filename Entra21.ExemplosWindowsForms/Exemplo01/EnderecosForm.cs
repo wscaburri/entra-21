@@ -42,8 +42,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            maskedTextBoxCep.Text = "";
-            textBoxEnderecoCompleto.Text = "";
+            maskedTextBoxCep.Text = String.Empty;
+            textBoxEnderecoCompleto.Text = String.Empty;
             comboBoxPaciente.SelectedIndex = -1;
         }
 
@@ -113,7 +113,7 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
                 var dadosEndereco = JsonConvert.DeserializeObject<EnderecoDadosRequisicao>(resposta);
 
                 textBoxEnderecoCompleto.Text =
-                    $"{dadosEndereco.Uf} - {dadosEndereco.Localidade} - { dadosEndereco.Bairro} - { dadosEndereco.Logradouro}";
+                    $"{ dadosEndereco.Uf } - { dadosEndereco.Localidade } - { dadosEndereco.Bairro } - { dadosEndereco.Logradouro }";
             }
         }
     }
