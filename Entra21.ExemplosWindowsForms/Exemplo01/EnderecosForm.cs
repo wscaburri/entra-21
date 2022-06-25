@@ -50,6 +50,8 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             maskedTextBoxCep.Text = "";
             textBoxEnderecoCompleto.Text = "";
             comboBoxPaciente.SelectedIndex = -1;
+
+            dataGridView1.ClearSelection();
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -121,9 +123,6 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             // Remove todas as linhas do dataGridView
             dataGridView1.Rows.Clear();
 
-            // Remove a seleção do dataGridView
-            dataGridView1.ClearSelection();
-
             // Percorrer cada um dos endereços adicionando uma nova linha na tabela
             for (var i = 0; i < enderecos.Count; i++)
             {
@@ -138,6 +137,9 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
                     endereco.Paciente.Nome
                 });
             }
+
+            // Remove a seleção do dataGridView
+            dataGridView1.ClearSelection();
         }
 
         private void ObterDadosCep()
@@ -168,11 +170,12 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             }
         }
 
-        // Será executado este método quando o usuário sair do campo de cep
         private void maskedTextBoxCep_Leave(object sender, EventArgs e)
         {
             ObterDadosCep();
         }
+
+        // Será executado este método quando o usuário sair do campo de cep
 
         private bool ValidarDados(string cep, string enderecoCompleto, string nomePaciente)
         {
@@ -253,6 +256,11 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
+            ApresentarDadosParaEdicao();
+        }
+
+        private void ApresentarDadosParaEdicao()
+        {
             if (dataGridView1.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um endereço para editar");
@@ -273,6 +281,16 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             maskedTextBoxCep.Text = endereco.Cep;
             textBoxEnderecoCompleto.Text = endereco.EnderecoCompleto;
             comboBoxPaciente.SelectedItem = endereco.Paciente.Nome;
+        }
+
+        private void EnderecosForm_Load(object sender, EventArgs e)
+        {
+            PreencherDataGridViewComEnderecos();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ApresentarDadosParaEdicao();
         }
     }
 }
