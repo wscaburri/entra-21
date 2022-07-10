@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ExerciciosListas
+﻿namespace Entra21.ExerciciosListas
 {
     public class Exercicio02
     {
@@ -31,7 +25,7 @@ namespace ExerciciosListas
             conteudosPassados.Add("If com OU");
             conteudosPassados.Add("While");
             conteudosPassados.Add("For");
-                        
+
             Console.WriteLine("Conteúdos Passados:");
             Console.WriteLine("1 = " + conteudosPassados[0] +
                 "\n2 = " + conteudosPassados[1] +
@@ -52,7 +46,7 @@ namespace ExerciciosListas
 
             indiceConteudo = conteudosPassados.IndexOf("Vetor");
             conteudosPassados[indiceConteudo] = "Vetor com for, um amor na minha vida";
-            
+
             Console.WriteLine("Conteúdos Passados:");
             Console.WriteLine("1 = " + conteudosPassados[0] +
                 "\n2 = " + conteudosPassados[1] +
@@ -65,7 +59,7 @@ namespace ExerciciosListas
             Console.WriteLine();
 
             conteudosPassados.Add("Classes, propriedades e métodos");
-            
+
             Console.WriteLine("Conteúdos Passados:");
             Console.WriteLine("1 = " + conteudosPassados[0] +
                 "\n2 = " + conteudosPassados[1] +

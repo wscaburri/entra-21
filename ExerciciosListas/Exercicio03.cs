@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ExerciciosListas
+﻿namespace Entra21.ExerciciosListas
 {
     public class Exercicio03
     {
@@ -30,10 +24,8 @@ namespace ExerciciosListas
 
             if (mediaNotas < 5)
                 Console.Write("Média: " + mediaNotas.ToString("F") + " REPROVADO");
-
             else if (mediaNotas < 7)
                 Console.Write("Média: " + mediaNotas.ToString("F") + " EM RECUPERAÇÃO");
-
             else
                 Console.Write("Média: " + mediaNotas.ToString("F") + " APROVADO");
         }
