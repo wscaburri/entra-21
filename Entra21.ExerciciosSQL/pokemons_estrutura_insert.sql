@@ -735,3 +735,40 @@ INSERT INTO pokemons (nome, codigo, categoria, descricao, altura, peso, hp, ataq
 ('Zygarde', '718', 'Order', 'When the Kalos region&#39;s ecosystem falls intodisarray, it appears and reveals its secret power.', 5.0, 305.0, 4, 5, 5, 4, 4, 5),
 ('Diancie', '719', 'Jewel', 'A sudden transformation of Carbink,its pink, glimmering body is said to bethe loveliest sight in the whole world.', 0.7, 8.8, 2, 5, 6, 5, 6, 3),
 ('Hoopa', '720', 'Mischief', 'In its true form, it possesses a huge amount of power. Legends of its avarice tell how it once carried off an entire castle to gain the treasure hidden within.', 0.5, 9.0, 4, 6, 3, 6, 5, 4);
+
+-- 1. Selecione todas as colunas.
+SELECT nome, codigo, categoria, descricao, altura, peso, hp, ataque, defesa, especial_ataque, especial_defesa, velocidade FROM pokemons;
+
+-- 2. Selecione o ataque, ataque especial, defesa e defesa especial.
+SELECT ataque, especial_ataque, defesa, especial_defesa FROM pokemons;
+
+-- 3. Selecione nome, categoria e ataque ordenado pelo ataque em ordem crescente.
+SELECT nome, categoria, ataque FROM pokemons ORDER BY ataque ASC;
+
+-- 4. Selecione altura, peso, com o cálculo do imc.
+SELECT altura, peso, (peso / (altura * altura)) AS imc FROM pokemons;
+
+-- 5. Selecione altura, peso, com o cálculo do imc ordenando o imc em ordem decrescente.
+SELECT altura, peso, (peso / (altura * altura)) AS imc FROM pokemons ORDER BY imc DESC;
+
+-- 6. Selecione nome e o tamanho do nome em ordem decrescente pelo nome.
+SELECT nome, LEN(nome) AS tamanho_nome FROM pokemons ORDER BY tamanho_nome;
+
+-- 7. Selecione nome, descrição, quando o nome contiver mais que 10 caracteres.
+SELECT nome, descricao FROM pokemons WHERE LEN(nome) > 10;  
+
+-- 8. Selecione nome, categoria, e ataque do pokemon que contém o menor valor de ataque.
+SELECT nome, categoria, ataque FROM pokemons WHERE ataque = (SELECT MIN(ataque) FROM pokemons);
+
+-- 9. Selecione o ataque, ataque especial, nome, defesa e defesa especial ordenando pelo ataque.
+SELECT ataque, especial_ataque, nome, defesa, especial_defesa FROM pokemons ORDER BY ataque ASC;
+
+-- 10. Selecione a média dos ataques.
+SELECT AVG(CAST(ataque AS DECIMAL)) AS 'Media Ataque' FROM pokemons;
+
+-- 11. Selecione a somatória dos ataques.
+SELECT SUM(ataque) AS 'Soma dos Ataques' FROM pokemons;
+
+-- 12. Selecione a média dos ataques especiais quando o nome do pokemon começar com ‘P’.
+SELECT AVG(CAST(especial_ataque AS DECIMAL)) AS 'Ataque Especial' FROM pokemons WHERE nome LIKE 'P%';
+
