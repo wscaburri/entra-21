@@ -68,4 +68,54 @@ SELECT * FROM pecas;
 SELECT * FROM clientes;
 SELECT * FROM enderecos;
 
+-- Consultar para listar nome, cpf e endereço completo do cliente.
+-- Consulta parte da tabela  cliente fazendo INNER JOIN na tabela endereços.
+SELECT 
+	c.nome,
+	c.cpf,
+	CONCAT(
+		e.estado, ' - ',
+		e.cidade, ' - ',
+		e.bairro, ' - ',
+		e. logradouro, ' - ',
+		e.numero) AS 'Endereço Completo'
+	FROM clientes AS c
+	INNER JOIN enderecos AS e ON (e.id_cliente = c.id);
+
+-- Consultar os endereços apresentando seu cliente por bairros com nome 'Velha'.
+-- Consulta partindo da tabela de endereços com outra consulta na tabela de clientes.
+SELECT 
+	c.nome,
+	e.bairro,
+	e.logradouro
+	FROM enderecos AS e
+	INNER JOIN clientes AS c ON (c.id = e.id_cliente)
+	WHERE e.bairro LIKE '%Velha%';
+
+-- STATUS dos pedidos
+-- 0 = Carrinho
+-- 1 = Aguardando pagamento
+-- 2 = Pagamento efetivado
+-- 3 = Entrega realizada
+
+INSERT INTO pedidos(id_cliente, status, data_criacao) VALUES
+(1, 0, GETDATE()), -- Pedido para o Claudio
+((SELECT id FROM clientes WHERE nome = 'Cry'), 0, GETDATE()); -- Pedido para o Cry
+
+-- Consultar pedido listando, data da criação(formato PT-BR), status com texto e nome do cliente.
+-- Consulta partindo da tabela de pedidos com JOIN em clientes.
+SELECT  
+	FORMAT(p.data_criacao, 'dd/MM/yyyy'),
+	CASE
+		WHEN [status] = 0 THEN 'Carrinho'
+		WHEN [status] = 1 THEN 'Aguardando Pagemento'
+		WHEN [status] = 2 THEN 'Pagamento Efetivado'
+		ELSE 'Entrega Realizada'
+	END AS 'Status Pedido',
+	c.nome
+	FROM pedidos AS p
+	INNER JOIN clientes AS c ON(p.id_cliente = c.id);
+
+UPDATE pedidos SET status = 1 WHERE id = 2;
+
 
