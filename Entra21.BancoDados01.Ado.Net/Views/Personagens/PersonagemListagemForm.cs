@@ -54,5 +54,45 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Personagens
 
             PreencherDataGridViewComPersonagens();
         }
+
+        private void buttonApagar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um registro");
+                return;
+            }
+
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            _personagemService.Apagar(id);
+
+            PreencherDataGridViewComPersonagens();
+
+            MessageBox.Show("Registro removido com sucesso");
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione algum Personagem");
+                return;
+            }
+
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var personagem = _personagemService.ObterPorId(id);
+
+            var personagemCadastroForm = new PersonagemCadastroEdicaoForm(personagem);
+            personagemCadastroForm.ShowDialog();
+
+            PreencherDataGridViewComPersonagens();
+
+        }
     }
 }
