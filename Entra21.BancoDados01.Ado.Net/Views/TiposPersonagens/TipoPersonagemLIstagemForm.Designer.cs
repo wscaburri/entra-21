@@ -1,6 +1,6 @@
 ﻿namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
 {
-    partial class TipoPersonagemLIstagemForm
+    partial class TipoPersonagemListagemForm
     {
         /// <summary>
         /// Required designer variable.

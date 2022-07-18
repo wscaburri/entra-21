@@ -65,6 +65,7 @@
             // 
             // comboBoxEditora
             // 
+            this.comboBoxEditora.DisplayMember = "Nome";
             this.comboBoxEditora.FormattingEnabled = true;
             this.comboBoxEditora.Location = new System.Drawing.Point(30, 120);
             this.comboBoxEditora.Name = "comboBoxEditora";
@@ -97,6 +98,7 @@
             this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonSalvar
             // 

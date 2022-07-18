@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
 {
-    public partial class TipoPersonagemLIstagemForm : Form
+    public partial class TipoPersonagemListagemForm : Form
     {
         private TipoPersonagemService tipoPersonagemService;
-        public TipoPersonagemLIstagemForm()
+        public TipoPersonagemListagemForm()
         {
             InitializeComponent();
 

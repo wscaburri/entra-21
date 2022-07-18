@@ -16,3 +16,12 @@ CREATE TABLE personagens(
 	nome VARCHAR(50),
 	FOREIGN KEY(id_editora) REFERENCES editoras(id),
 	FOREIGN KEY(id_tipo_personagem) REFERENCES tipos_personagens(id));
+
+INSERT INTO editoras (nome, apelido, data_criacao, faturamento) VALUES
+('DC', 'DC Comics', '1939-01-2', 2727000000.00),
+('Marvel', 'Marvel Comics', '1939-01-01', 3200000000.00),
+('The Boys', 'The Boys Comics', '2006-01-01', 1000000000.00);
+
+SELECT * FROM editoras;
+
+Select * from personagens;
