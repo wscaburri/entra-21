@@ -23,6 +23,8 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Personagens
             PreencherComboBoxTipoPersonagem();
 
             PreencherComboBoxEditora();
+
+            _idParaEditar = -1;
         }
 
         public PersonagemCadastroEdicaoForm(Personagem personagem) : this()
@@ -54,7 +56,7 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Personagens
                     break;
                 }
             }
-            
+
         }
 
         private void PreencherComboBoxEditora()
@@ -72,13 +74,13 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Personagens
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            if(comboBoxEditora.SelectedIndex == -1)
+            if (comboBoxEditora.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleciona uma Editora");
                 return;
             }
 
-            if(comboBoxTipoPersonagem.SelectedIndex == -1)
+            if (comboBoxTipoPersonagem.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleciona um Tipo de Personagem");
                 return;
@@ -93,12 +95,28 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Personagens
             personagem.TipoPersonagem = tipoPersonagem;
             personagem.Editora = editora;
 
-            // Persistir o que o usuario escolheu na tabela de personagens
             var personagemService = new PersonagemService();
-            personagemService.Cadastrar(personagem);
 
-            MessageBox.Show("Personagem cadastrado com sucesso");
-            Close();
+            // Verificar se está no modo de cadastro
+            if (_idParaEditar == -1)
+            {
+                // Persistir o que o usuario escolheu na tabela de personagens
+                personagemService.Cadastrar(personagem);
+
+                MessageBox.Show("Personagem cadastrado com sucesso");
+                Close();
+            }
+            else
+            {
+                // Modo de edição
+                personagem.Id = _idParaEditar;
+
+                personagemService.Editar(personagem);
+
+                MessageBox.Show("Personagem alterado com sucesso");
+                Close();
+            }
+
         }
 
         private void PreencherComboBoxTipoPersonagem()
