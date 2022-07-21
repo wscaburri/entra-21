@@ -13,7 +13,7 @@ namespace Entra21.ExercicioBancoDadosCidades
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new UnidadeFederativaCadastroEdicaoForm());
+            Application.Run(new UnidadeFederativaListagemForm());
         }
     }
 }
