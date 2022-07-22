@@ -13,7 +13,7 @@ namespace Entra21.ExercicioBancoDadosCidades.Services
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "DELETE FROM unidades_federativas WHERE id =  @ID";
+            comando.CommandText = "DELETE FROM unidades_federativas WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
 
             comando.ExecuteNonQuery();
@@ -72,9 +72,7 @@ namespace Entra21.ExercicioBancoDadosCidades.Services
             var unidadeFederativa = new UnidadeFederativa();
 
             unidadeFederativa.Id = Convert.ToInt32(primeiroRegistro["id"]);
-
             unidadeFederativa.Nome = primeiroRegistro["nome"].ToString();
-
             unidadeFederativa.Sigla = primeiroRegistro["sigla"].ToString();
 
             comando.Connection.Close();

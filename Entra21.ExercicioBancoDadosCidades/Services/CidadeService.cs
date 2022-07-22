@@ -23,8 +23,8 @@ namespace Entra21.ExercicioBancoDadosCidades.Services
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = "INSERT INTO cidades(id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib) " +
-                "VALUES (@ID_UNIDADE_FEDERATIVA, @NOME, @QUANTIDADE_HABITANTES, @DATA_HORA_FUNDACAO, @PIB);";
+            comando.CommandText = @"INSERT INTO cidades(id_unidade_federativa, nome, quantidade_habitantes, data_hora_fundacao, pib)
+VALUES (@ID_UNIDADE_FEDERATIVA, @NOME, @QUANTIDADE_HABITANTES, @DATA_HORA_FUNDACAO, @PIB);";
 
             comando.Parameters.AddWithValue("@ID_UNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
             comando.Parameters.AddWithValue("@NOME", cidade.Nome);
@@ -41,9 +41,12 @@ namespace Entra21.ExercicioBancoDadosCidades.Services
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = "UPDATE cidades SET " +
-                "id_unidade_federativa = @ID_UNIDADE_FEDERATIVA, nome = @NOME, quantidade_habitantes = @QUANTIDADE_HABITANTES, " +
-                "data_hora_fundacao = @DATA_HORA_FUNDACAO, pib = @PIBWHERE id = @ID";
+            comando.CommandText = @"UPDATE cidades SET
+id_unidade_federativa = @ID_UNIDADE_FEDERATIVA,
+nome = @NOME,
+quantidade_habitantes = @QUANTIDADE_HABITANTES,
+data_hora_fundacao = @DATA_HORA_FUNDACAO,
+pib = @PIBWHERE id = @ID";
 
             comando.Parameters.AddWithValue("@ID_UNIDADE_FEDERATIVA", cidade.UnidadeFederativa.Id);
             comando.Parameters.AddWithValue("@NOME", cidade.Nome);
