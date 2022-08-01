@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Input</Input></title>
+</head>
+
+<body>
+    <!-- Form é o que permite enviar dados da página para o servidor -->
+    <!-- METHOD GET: quer dizer que os daods serão enviados na URL -->
+    <!-- ACTION: é para onde estes dados serão enviados -->
+    <form method="GET" action="/Cadastrar">
+        <div>
+            <!-- container para componentes -->
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome"> <!-- Campo de Texto -->
+        </div>
+
+        <div>
+            <label for="idade">Idade:</label>
+            <input type="number" name="idade" id="idade"> <!-- Campo de inteiro -->
+        </div>
+
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email"> <!-- Campo de e-mail -->
+        </div>
+
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha"> <!-- Campo de senha -->
+        </div>
+
+        <div>
+            <label for="data_nascimento">Data de Nascimento</label>
+            <input type="datetime" name="data_nascimento" id="data_nascimento"> <!-- Campo da data -->
+        </div>
+
+        <div>
+            <label for="cor_preferida">Cor Preferida</label>
+            <select name="cor_preferida" id="cor_preferida">
+                <!-- ComboBox -->
+                <option value="1">Roxo</option>
+                <option value="2">Vermelho</option>
+                <option value="3">Rosa</option>
+                <option value="4">Azul</option>
+                <option value="5">Verde</option>
+                <option value="6">Ciano</option>
+                <option value="7">Magenta</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="possui_alergias">Possui Alergias?</label>
+            <input type="checkbox" value="1" name="possui_alergias" id="possui_alergias">
+        </div>
+
+        <div>
+            <label for="fez_cirurgias">Fez cirurgias?</label>
+            <input type="checkbox" value="1" name="fez_cirurgias" id="fez_cirurgias">
+        </div>
+
+        <div>
+            <input type="radio" value="pf" name="tipo_pessoa" id="tipo_pessoa_fisica">
+            <label for="tipo_pessoa_fisica">Pessoa Física</label>
+        </div>
+
+        <div>
+            <input type="radio" value="pj" name="tipo_pessoa" id="tipo_pessoa_juridica">
+            <label for="tipo_pessoa_juridica">Pessoa Jurídica</label>
+        </div>
+
+        <div>
+            <h3>Tipo de Jogo Favorito</h3>
+        </div>
+
+        <div>
+            <input type="radio" value="rpg" name="tipo_jogo" id="tipo_jogo_rpg">
+            <label for="tipo_jogo_rpg">RPG</label>
+
+            <input type="radio" value="fps" name="tipo_jogo" id="tipo_jogo_fps">
+            <label for="tipo_jogo_fps">FPS</label>
+        </div>
+
+        <div>
+            <button>Salvar</button>
+        </div>
+    </form>
+</body>
+
+</html>
