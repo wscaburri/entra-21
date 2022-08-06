@@ -1,0 +1,22 @@
+body{
+    background-color: antiquewhite;
+    color: blue;
+}
+p{
+    font-size: 20px;
+    color: rgb(141, 123, 132);
+    font-weight: 900;
+}
+a{
+    text-decoration: none;
+    background: white;
+    color: goldenrod;
+    border: 1px solid darkgreen;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+a:hover{
+    background: darkblue;
+    color: white;
+}
